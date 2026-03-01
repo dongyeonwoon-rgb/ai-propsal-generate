@@ -89,7 +89,8 @@ export async function POST(req: Request) {
                 "X-Title": "AI Proposal Generator"
             },
             body: JSON.stringify({
-                model: "anthropic/claude-3-opus",
+                // model: "anthropic/claude-3-opus", // Note: Opus requires pre-paid credits
+                model: "anthropic/claude-3-haiku",
                 messages: messages,
             })
         });
