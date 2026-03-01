@@ -65,7 +65,7 @@ export async function POST(req: Request) {
 
         if (!openrouterApiKey) {
             return NextResponse.json({
-                error: 'OpenRouter API key is not configured. Please add OPENROUTER_API_KEY to your .env.local file.'
+                error: 'OpenRouter API key is missing. For Vercel, please add OPENROUTER_API_KEY in the Vercel Dashboard Settings -> Environment Variables, then Redeploy.'
             }, { status: 500 });
         }
 
