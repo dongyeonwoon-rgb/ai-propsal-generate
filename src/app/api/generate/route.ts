@@ -92,7 +92,8 @@ export async function POST(req: Request) {
                 // model: "anthropic/claude-3-opus", // Note: Opus requires pre-paid credits
                 model: "anthropic/claude-3-haiku",
                 messages: messages,
-            })
+            }),
+            cache: 'no-store'
         });
 
         if (!orRes.ok) {
